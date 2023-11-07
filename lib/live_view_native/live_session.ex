@@ -29,7 +29,7 @@ defmodule LiveViewNative.LiveSession do
 
   ###
 
-  defp get_platform_context(%{"_platform" => platform_id} = connect_params) do
+  defp get_platform_context(%{"_lvn_platform" => platform_id} = connect_params) do
     platforms = LiveViewNative.platforms()
 
     with %LiveViewNativePlatform.Env{platform_config: platform_config} = context <-
